@@ -1,38 +1,43 @@
 import './App.css'
 import { Phone, Clock, MapPin, Shield, Star, Truck, Users } from 'lucide-react'
+import logo from './assets/logo.png'
+import logoFull from './assets/logo-full.png'
+import logoTruck from './assets/logo-truck.png'
 import guincho1 from './assets/guincho1.png'
 import guincho2 from './assets/guincho2.png'
 import whatsapp from './assets/wpp.png'
+import { color } from 'framer-motion'
 
 function App() {
-  const handleCallClick = () => {
-    window.open('tel:+5511947168135', '_self')
+  const handleWppClick = () => {
+    window.open('https://wa.me/5511947168135', '_blank')
+  }
+  const handlePhoneClick = () => {
+    window.location.href = 'tel:+5511947168135'
   }
 
   return (
     <div className="min-h-screen bg-white">
       {/* Header com botão de ligação */}
-      <header className="bg-red-600 text-white py-4 px-4 sticky top-0 z-50 shadow-lg">
+      <header className="text-white py-4 px-4 sticky top-0 z-50 shadow-lg" style={{ backgroundColor: '#aa1707', width: '100%' }}>
         <div className="max-w-6xl mx-auto flex justify-between items-center">
           <div className="flex items-center space-x-2">
-            <Truck className="h-8 w-8" />
-            <h1 className="text-xl md:text-2xl font-bold">CAS - Cleition Guincho</h1>
+            <img src={logoFull} alt="logo completo" className="w-26 block sm:w-39" />
           </div>
           <button 
-            onClick={handleCallClick}
+            onClick={handleWppClick}
             className="bg-yellow-400 hover:bg-yellow-500 text-black font-bold py-3 px-6 rounded-full flex items-center space-x-2 transition-all duration-300 transform hover:scale-105 shadow-lg animate-pulse"
           >
-            <img src= { whatsapp }
-              slt="whatsapp"
+            <img src={whatsapp}
+              alt="whatsapp"
               className="h-8 w-12" 
             />
-            <span className="text-sm md:text-base">LIGUE AGORA!</span>
+            <span className="text-sm md:text-base">CHAME AGORA!</span>
           </button>
         </div>
       </header>
 
-      {/* Hero Section */}
-      <section className="relative h-screen flex items-center justify-center bg-gradient-to-r from-red-600 to-blue-600">
+      <section className="relative h-130 flex items-center justify-center bg-gradient-to-r from-red-600 to-blue-600">
         <div 
           className="absolute inset-0 bg-cover bg-center opacity-30"
           style={{ backgroundImage: `url(${guincho1})` }}
@@ -46,7 +51,7 @@ function App() {
           </p>
           <div className="flex flex-col md:flex-row gap-4 justify-center items-center">
             <button 
-              onClick={handleCallClick}
+              onClick={handleWppClick}
               className="bg-yellow-400 hover:bg-yellow-500 text-black font-bold py-4 px-8 rounded-full text-lg flex items-center space-x-2 transition-all duration-300 transform hover:scale-105 shadow-xl"
             >
               <img src= { whatsapp }
@@ -69,11 +74,16 @@ function App() {
           <h3 className="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-800">
             Nossos Serviços
           </h3>
-          <div className="grid md:grid-cols-1 lg:grid-cols-1 gap-8">
+          <div className="grid md:grid-cols-1 lg:grid-cols-2 gap-8">
             <div className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 text-center">
               <Truck className="h-12 w-12 text-red-600 mb-4 mx-auto" />
-              <h4 className="text-xl font-bold mb-3 text-gray-800">Guincho Leve</h4>
-              <p className="text-gray-600">Para carros de passeio, motos e veículos leves</p>
+              <h4 className="text-xl font-bold mb-3 text-gray-800">Guinchos Leves e Médios</h4>
+              <p className="text-gray-600">Veículos de passeio, SUV, Motos, Utilitários, Blindados, HR e Bongo</p>
+            </div> 
+            <div className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 text-center">
+              <Star className="h-12 w-12 text-red-600 mb-4 mx-auto" />
+              <h4 className="text-xl font-bold mb-3 text-gray-800">Nota Fiscal Para Reembolso</h4>
+              <p className="text-gray-600">Atendimentos a segurados com nota fiscal pra reembolso da seguradora</p>
             </div>
           </div>
         </div>
@@ -106,10 +116,18 @@ function App() {
                   <MapPin className="h-6 w-6 text-red-600" />
                   <span className="text-lg text-gray-700">Rodovia Imgrantes</span>
                 </div>
+                <div className="flex items-center space-x-3">
+                  <MapPin className="h-6 w-6 text-red-600" />
+                  <span className="text-lg text-gray-700">Rodovia Anchieta</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <MapPin className="h-6 w-6 text-red-600" />
+                  <span className="text-lg text-gray-700">Rodoanel</span>
+                </div>
               </div>
               <div className="mt-8">
                 <button 
-                  onClick={handleCallClick}
+                  onClick={handleWppClick}
                   className="bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-6 rounded-lg flex items-center space-x-2 transition-all duration-300"
                 >
                   <Phone className="h-5 w-5" />
@@ -169,7 +187,7 @@ function App() {
             Não perca tempo! Entre em contato conosco e tenha atendimento rápido e confiável.
           </p>
           <button 
-            onClick={handleCallClick}
+            onClick={handlePhoneClick}
             className="bg-yellow-400 hover:bg-yellow-500 text-black font-bold py-4 px-8 rounded-full text-xl flex items-center space-x-3 mx-auto transition-all duration-300 transform hover:scale-105 shadow-xl animate-bounce"
           >
             <Phone className="h-7 w-7" />
