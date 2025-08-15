@@ -1,7 +1,7 @@
 {
   "name": "site-guincho",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
   "type": "module",
   "scripts": {
     "predeploy": "npm run build",
@@ -12,7 +12,7 @@
     "preview": "vite preview"
   },
 
-  "homepage": "https://FelipeSoares-code.github.io/guincho-cleiton",
+  "homepage": ".",
 
   "dependencies": {
     "@hookform/resolvers": "^5.0.1",
