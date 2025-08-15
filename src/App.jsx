@@ -47,7 +47,7 @@ function App() {
             Guincho 24 Horas
           </h2>
           <p className="text-xl md:text-2xl mb-8 max-w-2xl mx-auto">
-            Atendimento rápido e confiável em São Bernardo do Campo e região
+            Atendimento rápido e confiável em São Bernardo do Campo, Imigrantes e região
           </p>
           <div className="flex flex-col md:flex-row gap-4 justify-center items-center">
             <button 
