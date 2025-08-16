@@ -56,7 +56,7 @@ function App() {
               className="bg-yellow-400 hover:bg-yellow-500 text-black font-bold py-4 px-8 rounded-full text-lg flex items-center space-x-2 transition-all duration-300 transform hover:scale-105 shadow-xl"
             >
               <img src= { whatsapp }
-                slt="whatsapp"
+                alt="whatsapp"
                 className="h-8 w-12" 
               />
               <span>Chamar Guincho</span>
