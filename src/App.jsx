@@ -1,10 +1,11 @@
 import './App.css'
-import { Phone, Clock, MapPin, Shield, Star, Truck, Users } from 'lucide-react'
+import { Phone, Clock, MapPin, Shield, Star, Truck, Users, Receipt } from 'lucide-react'
 import logo from './assets/logo.png'
 import logoFull from './assets/logo-full.png'
 import logoTruck from './assets/logo-truck.png'
 import guincho1 from './assets/guincho1.png'
 import guincho2 from './assets/guincho2.png'
+import guincho3 from './assets/guincho3.png'
 import whatsapp from './assets/wpp.png'
 import { color } from 'framer-motion'
 
@@ -40,7 +41,7 @@ function App() {
       <section className="relative h-130 flex items-center justify-center bg-gradient-to-r from-red-600 to-blue-600">
         <div 
           className="absolute inset-0 bg-cover bg-center opacity-30"
-          style={{ backgroundImage: `url(${guincho1})` }}
+          style={{ backgroundImage: `url(${guincho2})` }}
         ></div>
         <div className="relative z-10 text-center text-white px-4">
           <h2 className="text-4xl md:text-6xl font-bold mb-6 animate-fade-in">
@@ -81,7 +82,7 @@ function App() {
               <p className="text-gray-600">Veículos de passeio, SUV, Motos, Utilitários, Blindados, HR e Bongo</p>
             </div> 
             <div className="bg-white p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 text-center">
-              <Star className="h-12 w-12 text-red-600 mb-4 mx-auto" />
+              <Receipt className="h-12 w-12 text-red-600 mb-4 mx-auto" />
               <h4 className="text-xl font-bold mb-3 text-gray-800">Nota Fiscal Para Reembolso</h4>
               <p className="text-gray-600">Atendimentos a segurados com nota fiscal pra reembolso da seguradora</p>
             </div>
@@ -137,7 +138,7 @@ function App() {
             </div>
             <div className="relative">
               <img 
-                src={guincho2} 
+                src={guincho3} 
                 alt="Guincho em ação" 
                 className="rounded-lg shadow-xl w-full h-auto"
               />
