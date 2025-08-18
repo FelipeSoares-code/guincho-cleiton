@@ -11,10 +11,12 @@ import { color } from 'framer-motion'
 
 function App() {
   const handleWppClick = () => {
-    window.open('https://wa.me/5511947168135', '_blank')
+    // window.open('https://wa.me/5511947168135', '_blank')
+    gtag_report_conversion('https://wa.me/5511947168135');
   }
   const handlePhoneClick = () => {
-    window.location.href = 'tel:+5511947168135'
+    // window.location.href = 'tel:+5511947168135'
+    gtag_report_conversion('tel:+5511947168135');
   }
 
   return (
