@@ -6,6 +6,8 @@ import logoTruck from './assets/logo-truck.png'
 import guincho1 from './assets/guincho1.png'
 import guincho2 from './assets/guincho2.png'
 import guincho3 from './assets/guincho3.png'
+import guincho4 from './assets/guincho4.png'
+import guinchoBaixo from './assets/guincho-baixo.png'
 import whatsapp from './assets/wpp.png'
 import { color } from 'framer-motion'
 
@@ -140,12 +142,17 @@ function App() {
             </div>
             <div className="relative">
               <img 
-                src={guincho3} 
+                src={guincho1} 
                 alt="Guincho em ação" 
                 className="rounded-lg shadow-xl w-full h-auto"
               />
             </div>
           </div>
+        </div>
+        <div className="grid md:grid-cols-1 lg:grid-cols-3 gap-12 mt-12">
+          <img src={guincho3} alt="Guincho na anchieta" className="rounded-lg shadow-xl w-full h-auto"/>
+          <img src={guincho2} alt="Guincho com rampa baixa" className="rounded-lg shadow-xl w-full h-auto"/>
+          <img src={guinchoBaixo} alt="Guincho com rampa baixa" className="rounded-lg shadow-xl w-full h-auto"/>
         </div>
       </section>
 
