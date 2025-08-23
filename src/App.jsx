@@ -1,15 +1,13 @@
 import './App.css'
 import { Phone, Clock, MapPin, Shield, Star, Truck, Users, Receipt } from 'lucide-react'
-import logo from './assets/logo.png'
 import logoFull from './assets/logo-full.png'
-import logoTruck from './assets/logo-truck.png'
 import guincho1 from './assets/guincho1.png'
 import guincho2 from './assets/guincho2.png'
 import guincho3 from './assets/guincho3.png'
 import guincho4 from './assets/guincho4.png'
+import guinchoEscolar from './assets/guincho-escolar.png'
 import guinchoBaixo from './assets/guincho-baixo.png'
 import whatsapp from './assets/wpp.png'
-import { color } from 'framer-motion'
 
 function App() {
   const handleWppClick = () => {
@@ -52,7 +50,7 @@ function App() {
             Guincho 24 Horas
           </h2>
           <p className="text-xl md:text-2xl mb-8 max-w-2xl mx-auto">
-            Atendimento rápido e confiável em São Bernardo do Campo, Imigrantes e região
+            Atendimento rápido e confiável em São Bernardo do Campo, Imigrantes, ABC e região
           </p>
           <div className="flex flex-col md:flex-row gap-4 justify-center items-center">
             <button 
@@ -150,8 +148,8 @@ function App() {
           </div>
         </div>
         <div className="grid md:grid-cols-1 lg:grid-cols-3 gap-12 mt-12">
-          <img src={guincho3} alt="Guincho na anchieta" className="rounded-lg shadow-xl w-full h-auto"/>
-          <img src={guincho2} alt="Guincho com rampa baixa" className="rounded-lg shadow-xl w-full h-auto"/>
+          <img src={guincho3} alt="Guincho na levando carro azul" className="rounded-lg shadow-xl w-full h-auto"/>
+          <img src={guinchoEscolar} alt="Guincho levando van Escolar" className="rounded-lg shadow-xl w-full h-auto"/>
           <img src={guinchoBaixo} alt="Guincho com rampa baixa" className="rounded-lg shadow-xl w-full h-auto"/>
         </div>
       </section>
