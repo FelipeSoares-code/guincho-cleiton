@@ -8,19 +8,32 @@ import guincho4 from './assets/guincho4.png'
 import guinchoEscolar from './assets/guincho-escolar.png'
 import guinchoBaixo from './assets/guincho-baixo.png'
 import whatsapp from './assets/wpp.png'
+import Popup22hr from './components/Popup22hr'
+import React from 'react';
 
 function App() {
   const handleWppClick = () => {
-    // window.open('https://wa.me/5511947168135', '_blank')
-    gtag_report_conversion('https://wa.me/5511947168135');
+    const now = new Date();
+    if (now.getHours() >= 22 || now.getHours() < 7) {
+      setPopupOpen(true);
+    } else {
+      gtag_report_conversion('https://wa.me/5511947168135');
+    }
   }
   const handlePhoneClick = () => {
-    // window.location.href = 'tel:+5511947168135'
-    gtag_report_conversion('tel:+5511947168135');
+    const now = new Date();
+    if (now.getHours() >= 22 || now.getHours() < 7) {
+      setPopupOpen(true);
+    } else {
+      gtag_report_conversion('tel:+5511947168135');
+    }
   }
+
+  const [popupOpen, setPopupOpen] = React.useState(false);
 
   return (
     <div className="min-h-screen bg-white">
+      <Popup22hr className="" open={popupOpen} onClose={() => setPopupOpen(false)} />
       {/* Header com botão de ligação */}
       <header className="text-white py-4 px-4 sticky top-0 z-50 shadow-lg" style={{ backgroundColor: '#aa1707', width: '100%' }}>
         <div className="max-w-6xl mx-auto flex justify-between items-center">
